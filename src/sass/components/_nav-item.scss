@@ -1,0 +1,56 @@
+.nav-item {
+  .nav-link.nav-link-overlay {
+    position: relative;
+  }
+
+  .nav-link.nav-link-overlay:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: all 0.15s ease-in-out;
+  }
+
+  .nav-link.active,
+  .nav-link.nav-link-overlay:before {
+    border-radius: 2rem;
+  }
+}
+
+.navbar.bg-primary .nav-item {
+  .nav-link.active,
+  .nav-link.nav-link-overlay:not(.active):hover::before {
+    background: rgba(darken($primary, 40%), 0.2);
+  }
+}
+
+.navbar.bg-success .nav-item {
+  .nav-link.active,
+  .nav-link.nav-link-overlay:not(.active):hover::before {
+    background: rgba(darken($success, 40%), 0.2);
+  }
+}
+
+.navbar.bg-info .nav-item {
+  .nav-link.active,
+  .nav-link.nav-link-overlay:not(.active):hover::before {
+    background: rgba(darken($info, 40%), 0.2);
+  }
+}
+
+.navbar.bg-warning .nav-item {
+  .nav-link.active,
+  .nav-link.nav-link-overlay:not(.active):hover::before {
+    background: rgba(darken($warning, 40%), 0.2);
+  }
+}
+
+.navbar.bg-danger .nav-item {
+  .nav-link.active,
+  .nav-link.nav-link-overlay:not(.active):hover::before {
+    background: rgba(darken($danger, 40%), 0.2);
+  }
+}

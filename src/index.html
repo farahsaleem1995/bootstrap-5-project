@@ -10,7 +10,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-info shadow-sm">
       <div class="container">
         <a href="#" class="navbar-brand mb-0">
-          <img src="./img/brand.png" alt="B5 logo" width="30" />
+          <img src="./img/brand.png" alt="B5 logo" width="35" />
         </a>
 
         <button
@@ -28,14 +28,31 @@
         <div class="collapse navbar-collapse" id="navbar-nav">
           <div class="w-100 d-flex flex-column flex-lg-row justify-content-lg-between">
             <ul class="navbar-nav">
-              <li class="nav-item fw-bold mx-2">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <li class="nav-item mx-1">
+                <a class="nav-link px-3 nav-link-overlay active" aria-current="page" href="#"
+                  >Home</a
+                >
               </li>
-              <li class="nav-item fw-bold mx-2">
-                <a class="nav-link" href="#">Portfolio</a>
+              <li class="nav-item mx-1">
+                <a class="nav-link px-3 nav-link-overlay" href="#">Portfolio</a>
               </li>
-              <li class="nav-item fw-bold mx-2">
-                <a class="nav-link" href="#">Skills</a>
+              <li class="nav-item dropdown mx-1">
+                <a
+                  class="nav-link px-3 nav-link-overlay dropdown-toggle"
+                  href="#"
+                  id="skills-ropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Skill
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="skills-ropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
               </li>
             </ul>
 
