@@ -32,6 +32,12 @@ module.exports = {
   // Determine how modules within the project are treated
   module: {
     rules: [
+      // HTML
+      {
+        test: /\.html$/,
+        use: ['html-loader'],
+      },
+
       // JavaScript
       {
         test: /\.m?js$/,
@@ -46,15 +52,11 @@ module.exports = {
 
       // Images: Copy image files to build folder
       {
-        test: /\.(?:ico|png|jpg|svg|gif)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[hash].[ext]',
-            outputPath: 'img',
-          },
-        },
+        test: /\.(?:ico|png|jpe?g|gif)$/,
         type: 'asset/resource',
+        generator: {
+          filename: 'img/[name].[hash].[ext]',
+        },
       },
 
       // Fonts and SVGs: Inline files
